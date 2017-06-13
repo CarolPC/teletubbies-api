@@ -1,0 +1,8 @@
+{
+  "name": "teletubbies-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CarolPC/teletubbies-api.git",
+  "author": "CarolPC and jeanvitor06",
+  "license": "MIT"
+}
