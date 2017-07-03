@@ -7,6 +7,9 @@ const TeletubbiesController = {
     listTeletubbiesService.perform()
     .then((teletubbies) => {
       res.status(200).json({ data: teletubbies });
+    })
+    .catch((error) => {
+        next(error);
     });
   },
 };
