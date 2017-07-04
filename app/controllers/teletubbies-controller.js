@@ -1,4 +1,5 @@
 const listTeletubbiesService = require('../services/list-teletubbies-service');
+const createTeletubbieService = require('../services/create-teletubbie-service');
 
 const TeletubbiesController = {
 
@@ -10,6 +11,22 @@ const TeletubbiesController = {
     })
     .catch((error) => {
         next(error);
+    });
+  },
+
+  create(req, res, next) {
+    const teletubbie = req.body;
+
+    createTeletubbieService.perform(teletubbie)
+    .then((teletubbie) => {
+
+      res.status(201).json({
+        message: 'Teletubbie added to database',
+        data: teletubbie
+      })
+    })
+    .catch((error) => {
+      next(error);
     });
   },
 };
